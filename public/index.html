@@ -2,10 +2,12 @@
 <head>
   <title>Finanny</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/css/main.css" crossorigin="anonymous">
+
+  <!-- Firebase -->
   <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.8.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/3.8.2/firebase-database.js"></script>
   <script>
   // Initialize Firebase
   var config = {
@@ -16,14 +18,35 @@
     messagingSenderId: "100818562690"
   };
   firebase.initializeApp(config);
+  var firepadRef = firebase.database().ref();
   </script>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+
+  <!-- font awesome -->
+  <script src="https://use.fontawesome.com/b45c3c60e3.js"></script>
 </head>
+<!-- colors to be used in this app -->
+
+<!--
+#B8ECD7 light blue
+#083643 darker blue
+#052129 darkest blue
+#B1E001 darker green
+#CEF09D light green
+#476C5E gray/green/blue
+#0D1412 black
+ -->
+
 <body>
   <nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse fixed-top">
     <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Finanny</a>
 
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
       <ul class="navbar-nav mr-auto">
