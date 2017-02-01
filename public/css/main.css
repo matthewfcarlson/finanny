@@ -1,10 +1,10 @@
-body {
-  padding-top: 5rem;
+body{
+  color:#0D1412;
 }
-.starter-template {
-  padding: 3rem 1.5rem;
-  text-align: center;
+#main{
+  padding:0;
 }
+
 .navbar.bg-finanny{
-  background-color: #292b2c!important;
+  background-color: #083643!important;
 }
