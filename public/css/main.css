@@ -1,9 +1,41 @@
 body{
   color:#0D1412;
 }
+/*
+#B8ECD7 light blue
+#083643 darker blue
+#052129 darkest blue
+#B1E001 lime green
+#CEF09D light green
+#476C5E gray/green/blue
+#0D1412 black
+*/
+/* Styling for all pages */
+.btn-outline-success {
+    color: #B1E001;
+    border-color: #B1E001;
+}
+.btn-outline-success:hover {
+    background-color: #B1E001!important;
+    border-color: #B1E001;
+}
+
 #main{
   padding:0;
 }
+#page-start .jumbotron{
+  background: url("/images/money.jpg") no-repeat top left fixed;
+  background-color:#CEF09D;
+  padding-top:7rem;
+  padding-bottom: 7rem;
+  border-radius: 0;
+  text-align: center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 
 .navbar.bg-finanny{
   background-color: #083643!important;
