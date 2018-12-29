@@ -4,7 +4,8 @@ const path = require("path");
 var http = require("http").Server(app);
 const history = require("connect-history-api-fallback");
 
-app.use("/", express.static(path.join(__dirname, "../dist")));
+app.use(express.static(path.join(__dirname, "../dist")));
+app.use(express.static(path.join(__dirname, "../dist/css")));
 
 app.get("/", function (req, res) {
     //res.send("<h1>Hello World</h1>");
