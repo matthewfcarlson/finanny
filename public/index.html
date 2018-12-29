@@ -1,119 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <title>Finanny</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/main.css" crossorigin="anonymous">
-
-  <!-- Firebase -->
-  <script src="https://www.gstatic.com/firebasejs/3.6.8/firebase.js"></script>
-  <script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCsTanTSDAdL5Jrn5cKgDBf6RKLvccxu0E",
-    authDomain: "finanny-7a851.firebaseapp.com",
-    databaseURL: "https://finanny-7a851.firebaseio.com",
-    storageBucket: "finanny-7a851.appspot.com",
-    messagingSenderId: "100818562690"
-  };
-  firebase.initializeApp(config);
-  var firepadRef = firebase.database().ref();
-  </script>
-
-  <!-- Jquery -->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-
-  <!-- Underscore -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.7.0/underscore.js"></script>
-  <!-- bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
-
-  <!-- font awesome -->
-  <script src="https://use.fontawesome.com/b45c3c60e3.js"></script>
-  <script src="/js/backbone-min.js"></script>
-
-</head>
-<!-- colors to be used in this app -->
-
-<!--
-#B8ECD7 light blue
-#083643 darker blue
-#052129 darkest blue
-#B1E001 lime green
-#CEF09D light green
-#476C5E gray/green/blue
-#0D1412 black
--->
-
-<body>
-  <nav class="navbar navbar-toggleable-md navbar-inverse bg-finanny">
-    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <a class="navbar-brand" href="#">Finanny</a>
-
-    <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-      <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Overview <span class="sr-only">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Household</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Expenses</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
-          <div class="dropdown-menu" aria-labelledby="dropdown01">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </div>
-        </li>
-      </ul>
-      <form class="form-inline my-2 my-lg-0 btn-group">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="button">Sign Up</button>
-        <button class="btn btn-outline-primary my-2 my-sm-0" type="button">Login</button>
-
-      </form>
-    </div>
-  </nav>
-
-  <div class="container-fluid" id="main">
-    <!-- main app container -->
-    <div class="page starter-template" id="page-start">
-      <div class='jumbotron mx-0 my-0'>
-        <h1>Clean up your finances.</h1>
-        <p class="lead">Start learning where your money is going.<br/>Find the trends and organize your spending to understand how to improve.</p>
-      </div>
-      <div class="container text-center bg-white py-5">
-        <div class="row">
-          <div class="col">
-            <i class="fa fa-line-chart fa-3x" aria-hidden="true"></i><br/>
-            <p class="lead">Project the Income</p>
-            <p>Understanding where your money is coming in and how much so you can know how much you can spend while still having savings</p>
-          </div>
-          <div class="col">
-            <i class="fa fa-users fa-3x" aria-hidden="true"></i><br/>
-            <p class="lead">Work Together</p>
-            <p>Work together with your partner or family members to make sure as a household, everything is coming together.</p>
-          </div>
-          <div class="col">
-            <i class="fa fa-money fa-3x" aria-hidden="true"></i><br/>
-            <p class="lead">Save Money</p>
-            <p>Have goals you're working towards for a rainy day. Know if you're ending each month and year in the black.</p>
-          </div>
-        </div>
-      </div>
-
-    </div>
-
-  </div><!-- /.container -->
-</body>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+    <title>finanny</title>
+  </head>
+  <body>
+    <noscript>
+      <strong>We're sorry but finanny doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
+    </noscript>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
 </html>
