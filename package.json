@@ -1,46 +1,64 @@
 {
   "name": "finanny",
-  "version": "0.1.0",
+  "version": "0.0.1",
+  "description": "A budgeting app that doesn't suck",
+  "productName": "Finanny",
+  "cordovaId": "com.mattico.finanny",
+  "author": "Matthew Carlson",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build-dev": "vue-cli-service build --mode development",
-    "build-prod": "vue-cli-service build",
-    "lint": "vue-cli-service lint",
-    "start": "node server/index.js",
+    "lint": "eslint --ext .js,.vue src",
+    "test": "echo \"No test specified\" && exit 0",
+    "build-prod": "quasar build",
+    "build-dev": "quasar build -d",
+    "build-ssr-prod": "quasar build -m ssr",
+    "build-ssr-dev": "quasar build -m ssr -d",
+    "build-pwa-prod": "quasar build -m pwa",
+    "build-pwa-dev": "quasar build -m pwa -d",
+    "start-pwa": "node src-pwa/index.js",
+    "start-ssr": "node src-ssr/bootstrap.js",
+    "start": "npm run start-pwa",
     "dev": "run-s build-dev start",
     "prod": "run-s build-prod start",
-    "heroku-postbuild": "run-s build-prod"
-  },
-  "engines": {
-    "node": ">= 8.11.0"
+    "heroku-postbuild": "run-s build-prod build-ssr-prod"
   },
   "dependencies": {
-    "@feathersjs/express": "^1.3.0",
-    "@feathersjs/feathers": "^3.3.0",
-    "@feathersjs/socketio": "^3.2.8",
-    "connect-history-api-fallback": "^1.5.0",
-    "feathers-vuex": "^1.6.2",
-    "register-service-worker": "^1.5.2",
-    "vue": "^2.5.17",
-    "vue-class-component": "^6.0.0",
-    "vue-property-decorator": "^7.0.0",
-    "vue-router": "^3.0.1",
-    "vuex": "^3.0.1"
+    "axios": "^0.18.0",
+    "vue": "^2.5.21",
+    "pm2": "^3.2.4",
+    "express": "^4.16.4",
+    "helmet": "^3.15.0",
+    "compression": "^1.7.3",
+    "cors": "^2.8.5",
+    "winston": "^3.1.0",
+    "serve-favicon": "^2.5.0",
+    "connect-history-api-fallback": "^1.5.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-eslint": "^3.2.0",
-    "@vue/cli-plugin-pwa": "^3.2.0",
-    "@vue/cli-plugin-typescript": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
-    "@vue/eslint-config-prettier": "^4.0.0",
-    "@vue/eslint-config-typescript": "^3.2.0",
-    "babel-eslint": "^10.0.1",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
+    "babel-eslint": "^8.2.1",
+    "eslint": "^4.18.2",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-friendly-formatter": "^4.0.1",
+    "eslint-loader": "^2.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "eslint-plugin-vue": "^4.3.0",
+    "quasar-cli": "^0.17.0",
+    "strip-ansi": "=3.0.1",
     "npm-run-all": "^4.1.5",
-    "typescript": "^3.0.0",
-    "vue-template-compiler": "^2.5.17"
-  }
+    "@vue/babel-preset-app": "^3.2.2",
+    "vue-template-compiler": "^2.5.21"
+  },
+  "engines": {
+    "node": ">= 8.9.0",
+    "npm": ">= 5.6.0",
+    "yarn": ">= 1.6.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
 }
