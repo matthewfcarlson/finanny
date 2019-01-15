@@ -21,7 +21,7 @@
     "dev-ssr": "run-s build-ssr-dev start-ssr",
     "dev-pwa": "run-s build-pwa-dev start-pwa",
     "prod": "run-s build-prod start",
-    "heroku-postbuild": "run-s build-ssr-prod"
+    "heroku-postbuild": "run-s build-ssr-dev"
   },
   "dependencies": {
     "axios": "^0.18.0",
