@@ -17,14 +17,15 @@ module.exports = function (ctx) {
       // 'fontawesome'
     ],
     supportIE: false,
+    preFetch: true,
     build: {
       scopeHoisting: true,
-      // vueRouterMode: 'history',
-      // vueCompiler: true,
-      // gzip: true,
-      // analyze: true,
+      vueRouterMode: 'history',
+      vueCompiler: true,
+      gzip: true,
+      analyze: true,
       // extractCSS: false,
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         cfg.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
@@ -69,15 +70,15 @@ module.exports = function (ctx) {
     // animations: 'all' --- includes all animations
     animations: [],
     ssr: {
-      pwa: false
+      pwa: true
     },
     pwa: {
       // workboxPluginMode: 'InjectManifest',
       // workboxOptions: {},
       manifest: {
-        // name: 'Quasar App',
-        // short_name: 'Quasar-PWA',
-        // description: 'Best PWA App in town!',
+        name: 'Finanny',
+        short_name: 'finanny',
+        description: 'Budgeting that doesn\'t suck',
         display: 'standalone',
         orientation: 'portrait',
         background_color: '#ffffff',
@@ -116,7 +117,7 @@ module.exports = function (ctx) {
     },
     electron: {
       // bundler: 'builder', // or 'packager'
-      extendWebpack (cfg) {
+      extendWebpack(cfg) {
         // do something with Electron process Webpack cfg
       },
       packager: {
