@@ -16,12 +16,12 @@
     "build-pwa-prod": "quasar build -m pwa",
     "build-pwa-dev": "quasar build -m pwa -d",
     "start-pwa": "node src-pwa/index.js",
-    "start-ssr": "node src-ssr/bootstrap.js",
+    "start-ssr": "quasar serve --history",
     "start": "npm run start-ssr",
     "dev-ssr": "run-s build-ssr-dev start-ssr",
     "dev-pwa": "run-s build-pwa-dev start-pwa",
     "prod": "run-s build-prod start",
-    "heroku-postbuild": "run-s build-prod build-ssr-prod"
+    "heroku-postbuild": "run-s build-ssr-prod"
   },
   "dependencies": {
     "axios": "^0.18.0",
