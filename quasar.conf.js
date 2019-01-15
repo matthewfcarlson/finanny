@@ -23,7 +23,7 @@ module.exports = function (ctx) {
       vueRouterMode: 'history',
       vueCompiler: true,
       gzip: true,
-      analyze: true,
+      analyze: false,
       // extractCSS: false,
       extendWebpack(cfg) {
         cfg.module.rules.push({
